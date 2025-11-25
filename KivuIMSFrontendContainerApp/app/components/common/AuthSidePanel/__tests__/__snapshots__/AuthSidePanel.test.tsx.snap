@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthSidePanel matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-127oxiz"
+    data-testid="auth-left-panel"
+  >
+    <div
+      class="MuiBox-root css-s6lh4k"
+    >
+      <div
+        class="MuiBox-root css-1qcrck8"
+      >
+        <img
+          alt="Kivu IMS Logo"
+          data-testid="auth-logo"
+          src="test-file-stub"
+          style="width: 400px; margin: auto;"
+        />
+      </div>
+      <div
+        class="MuiBox-root css-1mmnsqo"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6 css-dsixvh-MuiTypography-root"
+          data-testid="auth-left-text"
+        >
+          Re-imagining inventory management experience with advance data analytics for optimum performance
+        </h6>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-vcuh2c"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-caption css-okytkp-MuiTypography-root"
+        data-testid="auth-left-footer"
+      >
+        © kivunova 2025
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

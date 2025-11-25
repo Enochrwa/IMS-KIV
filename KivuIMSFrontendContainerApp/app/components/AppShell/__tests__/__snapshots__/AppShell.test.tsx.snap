@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppShell Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-145m1uv"
+  >
+    <div
+      data-testid="sidebar"
+    >
+      Sidebar
+    </div>
+    <div
+      class="MuiBox-root css-2u1lp9"
+    >
+      <div
+        data-testid="topbar"
+      >
+        Topbar
+      </div>
+      <main
+        class="MuiBox-root css-1knmd8y"
+      />
+      <div
+        class="flyover "
+      >
+        <div
+          class="overlay-content MuiBox-root css-0"
+        >
+          <div
+            class="MuiContainer-root MuiContainer-maxWidthLg flyover-left css-5c1adp-MuiContainer-root"
+          >
+            <div
+              class="MuiContainer-root MuiContainer-maxWidthLg css-5c1adp-MuiContainer-root"
+            >
+              <div
+                data-testid="sidebar"
+              >
+                Sidebar
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiContainer-root MuiContainer-maxWidthLg flyover-right-side css-5c1adp-MuiContainer-root"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+              data-testid="CloseIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

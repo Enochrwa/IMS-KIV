@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthRightSidePanel Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-1948ji6"
+  >
+    <div
+      data-isauthflow="true"
+      data-testid="mock-topbar"
+    >
+      Mock Topbar
+    </div>
+    <div>
+      Snapshot Child
+    </div>
+  </div>
+</DocumentFragment>
+`;

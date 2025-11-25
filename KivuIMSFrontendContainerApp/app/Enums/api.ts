@@ -1,0 +1,3 @@
+export enum API_RESPONSE_CODE {
+  LOGIN_SUCCESS = "LOGIN_SUCCESS"
+}

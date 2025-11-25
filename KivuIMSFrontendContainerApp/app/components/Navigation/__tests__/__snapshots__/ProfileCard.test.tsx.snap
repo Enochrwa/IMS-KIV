@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileCard renders fallback values when profile data is missing 1`] = `
+<DocumentFragment>
+  <article
+    aria-label="Profile Card"
+    class="MuiBox-root css-5svoz8"
+    role="article"
+  >
+    <div
+      aria-label="View profile details"
+      class="MuiBox-root css-4ysy55"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-18k2bs-MuiAvatar-root"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiAvatar-fallback css-1mo2pzk-MuiSvgIcon-root-MuiAvatar-fallback"
+          data-testid="PersonIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiBox-root css-0"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-1i3tsf3-MuiTypography-root"
+        >
+          Username
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1wle3ir-MuiTypography-root"
+        >
+          Role
+        </p>
+      </div>
+    </div>
+    <button
+      aria-label="Logout"
+      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-3cz4e1-MuiButtonBase-root-MuiButton-root"
+      data-mui-internal-clone-element="true"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+        data-testid="LogoutIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="m17 7-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4z"
+        />
+      </svg>
+    </button>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`ProfileCard renders the user's profile data 1`] = `
+<DocumentFragment>
+  <article
+    aria-label="Profile Card"
+    class="MuiBox-root css-5svoz8"
+    role="article"
+  >
+    <div
+      aria-label="View profile details"
+      class="MuiBox-root css-4ysy55"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular css-fmeqll-MuiAvatar-root"
+      >
+        <img
+          alt="John"
+          class="MuiAvatar-img css-1su80sj-MuiAvatar-img"
+          src="/avatar.jpg"
+        />
+      </div>
+      <div
+        class="MuiBox-root css-0"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-1i3tsf3-MuiTypography-root"
+        >
+          John
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1wle3ir-MuiTypography-root"
+        >
+          Admin
+        </p>
+      </div>
+    </div>
+    <button
+      aria-label="Logout"
+      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-3cz4e1-MuiButtonBase-root-MuiButton-root"
+      data-mui-internal-clone-element="true"
+      tabindex="0"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+        data-testid="LogoutIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="m17 7-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4z"
+        />
+      </svg>
+    </button>
+  </article>
+</DocumentFragment>
+`;

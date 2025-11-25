@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardHeader renders correctly and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-5ikm2w"
+  >
+    <div
+      class="MuiStack-root css-68dwga-MuiStack-root"
+    >
+      <div
+        class="MuiBox-root css-1as5p5"
+      >
+        <div
+          data-testid="date-range-selector"
+        >
+          <p>
+            Date Range: 
+          </p>
+          <button>
+            Change Period
+          </button>
+        </div>
+      </div>
+      <div
+        class="MuiBox-root css-oo3nux"
+      >
+        <button
+          data-testid="add-metric-btn"
+        >
+          Add Metric
+        </button>
+        <button
+          data-testid="filter-btn"
+        >
+          Filters
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

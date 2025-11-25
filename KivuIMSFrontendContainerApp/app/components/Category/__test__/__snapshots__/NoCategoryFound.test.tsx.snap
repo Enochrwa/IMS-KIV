@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoCategoryFound renders correctly without Add button and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-18zmp4z"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-63qgcd-MuiSvgIcon-root"
+      data-testid="CategoryOutlinedIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="m12 2-5.5 9h11zm0 3.84L13.93 9h-3.87zM17.5 13c-2.49 0-4.5 2.01-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5m0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5M3 21.5h8v-8H3zm2-6h4v4H5z"
+      />
+    </svg>
+    <h6
+      class="MuiTypography-root MuiTypography-h6 css-lp01md-MuiTypography-root"
+    >
+      No Categories Found
+    </h6>
+    <p
+      class="MuiTypography-root MuiTypography-body2 css-19fh7p6-MuiTypography-root"
+    >
+      You haven’t added any categories yet. Create your first one to start organizing products into logical groups.
+    </p>
+  </div>
+</DocumentFragment>
+`;

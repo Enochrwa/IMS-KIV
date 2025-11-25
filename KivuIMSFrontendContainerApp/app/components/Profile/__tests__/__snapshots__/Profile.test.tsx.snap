@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile renders ProfileSkeleton when loading 1`] = `
+<DocumentFragment>
+  <div
+    aria-busy="true"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root css-vnot7s-MuiPaper-root-MuiCard-root"
+    data-testid="profile-skeleton"
+    role="progressbar"
+    style="--Paper-shadow: none;"
+  >
+    <div
+      class="MuiCardContent-root css-1rmlwxw-MuiCardContent-root"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-h6 css-1hnty41-MuiTypography-root"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-kkcbhd-MuiSkeleton-root"
+          style="width: 180px; height: 28px;"
+        />
+      </h6>
+      <div
+        class="MuiStack-root css-lz9w1o-MuiStack-root"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-wave css-127vqmw-MuiSkeleton-root"
+          style="width: 80px; height: 80px;"
+        />
+        <div
+          class="MuiBox-root css-1bqk722"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-a15yta-MuiSkeleton-root"
+            style="width: 40%; height: 28px;"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-bg2br5-MuiSkeleton-root"
+            style="width: 60%; height: 24px;"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiBox-root css-i3pbo"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-kj4ytl-MuiTypography-root"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-bg2br5-MuiSkeleton-root"
+            style="width: 80px; height: 20px;"
+          />
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-bg2br5-MuiSkeleton-root"
+            style="width: 120px; height: 24px;"
+          />
+        </p>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-11e9cbv-MuiDivider-root"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-154dsb1-MuiGrid-root"
+      >
+        <div
+          class="MuiBox-root css-0"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-a15yta-MuiSkeleton-root"
+            style="width: 100px; height: 20px;"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-bg2br5-MuiSkeleton-root"
+            style="width: 180px; height: 24px;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-a15yta-MuiSkeleton-root"
+            style="width: 100px; height: 20px;"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-bg2br5-MuiSkeleton-root"
+            style="width: 180px; height: 24px;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-a15yta-MuiSkeleton-root"
+            style="width: 100px; height: 20px;"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-bg2br5-MuiSkeleton-root"
+            style="width: 180px; height: 24px;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-a15yta-MuiSkeleton-root"
+            style="width: 100px; height: 20px;"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-bg2br5-MuiSkeleton-root"
+            style="width: 180px; height: 24px;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-a15yta-MuiSkeleton-root"
+            style="width: 100px; height: 20px;"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-bg2br5-MuiSkeleton-root"
+            style="width: 180px; height: 24px;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-0"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-a15yta-MuiSkeleton-root"
+            style="width: 100px; height: 20px;"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-bg2br5-MuiSkeleton-root"
+            style="width: 180px; height: 24px;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`UserProfile renders tabs and allows switching 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-1wcaknn"
+  >
+    <div
+      class="MuiTabs-root css-172ofvk-MuiTabs-root"
+    >
+      <div
+        class="MuiTabs-scroller MuiTabs-fixed css-s2t35c-MuiTabs-scroller"
+        style="overflow: hidden; margin-bottom: 0px;"
+      >
+        <div
+          aria-label="Profile tabs"
+          class="MuiTabs-list MuiTabs-flexContainer css-hzcega-MuiTabs-list"
+          role="tablist"
+        >
+          <button
+            aria-controls="panel-0"
+            aria-selected="false"
+            class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-l4tp97-MuiButtonBase-root-MuiTab-root"
+            id="profile-tab-0"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
+            >
+              Overview
+            </p>
+          </button>
+          <button
+            aria-controls="panel-1"
+            aria-selected="true"
+            class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-l4tp97-MuiButtonBase-root-MuiTab-root"
+            id="profile-tab-1"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-rizt0-MuiTypography-root"
+            >
+              Settings
+            </p>
+          </button>
+        </div>
+        <span
+          class="MuiTabs-indicator css-1qltlow-MuiTabs-indicator"
+          style="left: 0px; width: 0px;"
+        />
+      </div>
+    </div>
+    <div
+      aria-labelledby="profile-tab-1"
+      class="MuiBox-root css-1yuhvjn"
+      id="profile-tabpanel-1"
+      role="tabpanel"
+    >
+      <div>
+        Settings Content
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

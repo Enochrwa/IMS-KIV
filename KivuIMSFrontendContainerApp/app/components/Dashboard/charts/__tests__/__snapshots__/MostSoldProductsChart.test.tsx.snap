@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MostSoldProductsChart matches snapshot - empty  1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters css-1a1iu8h-MuiPaper-root-MuiAccordion-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="true"
+        class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters css-10nzs31-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content Mui-expanded MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-izap9d-MuiTypography-root"
+          >
+            Most Sold Products
+          </p>
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1lj39kh-MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiBox-root css-1emhmkf"
+              >
+                <div
+                  class="css-5yl3uy-MuiChartsWrapper-root"
+                >
+                  <svg
+                    class="css-2z0uug-MuiChartsSurface-root"
+                    viewBox="0 0 100 300"
+                  >
+                    <g
+                      class="MuiChartsGrid-root css-g2sgfh-MuiChartsGrid-root"
+                    />
+                    <g
+                      clip-path="url(#:r2:-clip-path)"
+                    >
+                      <g
+                        class="MuiBar-root css-1vlm9pl-MuiBarPlot-root"
+                      >
+                        <g
+                          class="MuiBar-series"
+                          data-series="auto-generated-id-0"
+                        />
+                      </g>
+                      <text
+                        class="css-1f57y8b"
+                        x="102.5"
+                        y="127.5"
+                      >
+                        No data to display
+                      </text>
+                    </g>
+                    <g
+                      class="MuiChartsAxis-root MuiChartsAxis-directionX MuiChartsAxis-bottom MuiChartsAxis-id-DEFAULT_X_AXIS_KEY css-1yscjcf-MuiChartsAxis-root-MuiChartsXAxis-root"
+                      transform="translate(0, 235)"
+                    >
+                      <line
+                        class="MuiChartsAxis-line"
+                        x1="145"
+                        x2="60"
+                      />
+                    </g>
+                    <g
+                      class="MuiChartsAxis-root MuiChartsAxis-directionY MuiChartsAxis-left MuiChartsAxis-id-defaultized-y-axis-0 css-ra8wgq-MuiChartsAxis-root-MuiChartsYAxis-root"
+                      transform="translate(145, 0)"
+                    >
+                      <line
+                        class="MuiChartsAxis-line"
+                        stroke-linecap="square"
+                        y1="20"
+                        y2="235"
+                      />
+                    </g>
+                    <clippath
+                      id=":r2:-clip-path"
+                    >
+                      <rect
+                        height="215"
+                        width="-85"
+                        x="145"
+                        y="20"
+                      />
+                    </clippath>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MostSoldProductsChart matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters css-1a1iu8h-MuiPaper-root-MuiAccordion-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="true"
+        class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters css-10nzs31-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content Mui-expanded MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-izap9d-MuiTypography-root"
+          >
+            Most Sold Products
+          </p>
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1lj39kh-MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiBox-root css-1emhmkf"
+              >
+                <div
+                  class="css-5yl3uy-MuiChartsWrapper-root"
+                >
+                  <svg
+                    class="css-2z0uug-MuiChartsSurface-root"
+                    viewBox="0 0 100 300"
+                  >
+                    <g
+                      class="MuiChartsGrid-root css-g2sgfh-MuiChartsGrid-root"
+                    />
+                    <g
+                      clip-path="url(#:r0:-clip-path)"
+                    >
+                      <g
+                        class="MuiBar-root css-1vlm9pl-MuiBarPlot-root"
+                      >
+                        <g
+                          class="MuiBar-series"
+                          data-series="auto-generated-id-0"
+                        />
+                      </g>
+                    </g>
+                    <g
+                      class="MuiChartsAxis-root MuiChartsAxis-directionX MuiChartsAxis-bottom MuiChartsAxis-id-DEFAULT_X_AXIS_KEY css-1yscjcf-MuiChartsAxis-root-MuiChartsXAxis-root"
+                      transform="translate(0, 235)"
+                    >
+                      <line
+                        class="MuiChartsAxis-line"
+                        x1="145"
+                        x2="60"
+                      />
+                    </g>
+                    <g
+                      class="MuiChartsAxis-root MuiChartsAxis-directionY MuiChartsAxis-left MuiChartsAxis-id-defaultized-y-axis-0 css-ra8wgq-MuiChartsAxis-root-MuiChartsYAxis-root"
+                      transform="translate(145, 0)"
+                    >
+                      <line
+                        class="MuiChartsAxis-line"
+                        stroke-linecap="square"
+                        y1="20"
+                        y2="235"
+                      />
+                      <g
+                        class="MuiChartsAxis-tickContainer"
+                        transform="translate(0, 20.000000000000007)"
+                      >
+                        <line
+                          class="MuiChartsAxis-tick"
+                          x2="-6"
+                        />
+                        <text
+                          class="MuiChartsAxis-tickLabel"
+                          dominant-baseline="central"
+                          style="font-family: "Roboto", "Helvetica", "Arial", sans-serif; font-weight: 400; font-size: 12px; line-height: 1.66; letter-spacing: 0.03333em;"
+                          text-anchor="end"
+                          x="-8"
+                          y="35.833333333333336"
+                        >
+                          <tspan
+                            dominant-baseline="central"
+                            dy="0px"
+                            x="-8"
+                          >
+                            Laptop
+                          </tspan>
+                        </text>
+                      </g>
+                      <g
+                        class="MuiChartsAxis-tickContainer"
+                        transform="translate(0, 91.66666666666669)"
+                      >
+                        <line
+                          class="MuiChartsAxis-tick"
+                          x2="-6"
+                        />
+                        <text
+                          class="MuiChartsAxis-tickLabel"
+                          dominant-baseline="central"
+                          style="font-family: "Roboto", "Helvetica", "Arial", sans-serif; font-weight: 400; font-size: 12px; line-height: 1.66; letter-spacing: 0.03333em;"
+                          text-anchor="end"
+                          x="-8"
+                          y="35.833333333333336"
+                        >
+                          <tspan
+                            dominant-baseline="central"
+                            dy="0px"
+                            x="-8"
+                          >
+                            Shoes
+                          </tspan>
+                        </text>
+                      </g>
+                      <g
+                        class="MuiChartsAxis-tickContainer"
+                        transform="translate(0, 163.33333333333334)"
+                      >
+                        <line
+                          class="MuiChartsAxis-tick"
+                          x2="-6"
+                        />
+                        <text
+                          class="MuiChartsAxis-tickLabel"
+                          dominant-baseline="central"
+                          style="font-family: "Roboto", "Helvetica", "Arial", sans-serif; font-weight: 400; font-size: 12px; line-height: 1.66; letter-spacing: 0.03333em;"
+                          text-anchor="end"
+                          x="-8"
+                          y="35.833333333333336"
+                        >
+                          <tspan
+                            dominant-baseline="central"
+                            dy="0px"
+                            x="-8"
+                          >
+                            Headphones
+                          </tspan>
+                        </text>
+                      </g>
+                      <g
+                        class="MuiChartsAxis-tickContainer"
+                        transform="translate(0, 235)"
+                      >
+                        <line
+                          class="MuiChartsAxis-tick"
+                          x2="-6"
+                        />
+                      </g>
+                    </g>
+                    <clippath
+                      id=":r0:-clip-path"
+                    >
+                      <rect
+                        height="215"
+                        width="-85"
+                        x="145"
+                        y="20"
+                      />
+                    </clippath>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MetricCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-1nexzga"
+  >
+    <div
+      class="MuiBox-root css-pcqfzb"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-rgqctz-MuiTypography-root"
+      >
+        Net Revenue
+      </p>
+      <button
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1374xo4-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-120dh41-MuiSvgIcon-root"
+          data-testid="MoreVertIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="MuiStack-root css-72a8c9-MuiStack-root"
+    >
+      <div
+        class="MuiBox-root css-0"
+      >
+        <h5
+          class="MuiTypography-root MuiTypography-h5 css-kwxs7k-MuiTypography-root"
+        >
+          $152K
+        </h5>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-6t4l3d-MuiTypography-root"
+        >
+          ↑ 12.4% vs last month
+        </p>
+      </div>
+      <div
+        class="MuiBox-root css-dw5hfm"
+      >
+        <div
+          data-testid="sparkline-chart"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

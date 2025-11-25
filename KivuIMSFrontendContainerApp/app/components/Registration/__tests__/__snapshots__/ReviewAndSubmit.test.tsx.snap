@@ -1,0 +1,440 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewAndSubmit (unit) matches snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-1bbnbcs"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters css-amzwdy-MuiPaper-root-MuiAccordion-root"
+      style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="true"
+          class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters css-1v25ujf-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content Mui-expanded MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-jnor2h-MuiTypography-root"
+            >
+              Personal Info
+            </p>
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i623q8-MuiSvgIcon-root"
+              data-testid="ExpandMoreIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-11nt1lr-MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-l0dkh1-MuiPaper-root-MuiTableContainer-root"
+                >
+                  <table
+                    class="MuiTable-root css-bokan6-MuiTable-root"
+                  >
+                    <tbody
+                      class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+                    >
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          First Name
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          John
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Last Name
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          Doe
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Email
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          john@example.com
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Password
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          ********
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Phone
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          +250788000111
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Profile Image
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        />
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Phone Country Code
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          RW
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-amzwdy-MuiPaper-root-MuiAccordion-root"
+      style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1v25ujf-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-jnor2h-MuiTypography-root"
+            >
+              Company Info
+            </p>
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i623q8-MuiSvgIcon-root"
+              data-testid="ExpandMoreIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-11nt1lr-MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-l0dkh1-MuiPaper-root-MuiTableContainer-root"
+                >
+                  <table
+                    class="MuiTable-root css-bokan6-MuiTable-root"
+                  >
+                    <tbody
+                      class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+                    >
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Name
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          Kivunova
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Business Type
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          Tech
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Registration Number
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          RN1234
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Description
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          Software company
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Address
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          KG 11st 43, Kabeza, Rugarama, Gitega, Nyarugenge, Kigali City, Rwanda
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Currency Code
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          RWF
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded MuiAccordion-gutters css-amzwdy-MuiPaper-root-MuiAccordion-root"
+      style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+    >
+      <h3
+        class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+      >
+        <button
+          aria-expanded="false"
+          class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters css-1v25ujf-MuiButtonBase-root-MuiAccordionSummary-root"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-jnor2h-MuiTypography-root"
+            >
+              Store Info
+            </p>
+          </span>
+          <span
+            class="MuiAccordionSummary-expandIconWrapper css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i623q8-MuiSvgIcon-root"
+              data-testid="ExpandMoreIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </span>
+        </button>
+      </h3>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+          >
+            <div
+              class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-11nt1lr-MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiTableContainer-root css-l0dkh1-MuiPaper-root-MuiTableContainer-root"
+                >
+                  <table
+                    class="MuiTable-root css-bokan6-MuiTable-root"
+                  >
+                    <tbody
+                      class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+                    >
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Name
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          Main Store
+                        </td>
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-rmgogl-MuiTableCell-root"
+                        >
+                          Address
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-e4db5r-MuiTableCell-root"
+                        >
+                          KG 11st 43, Kabeza, Rugarama, Gitega, Nyarugenge, Kigali City, Rwanda
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

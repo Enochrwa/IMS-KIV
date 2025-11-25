@@ -1,0 +1,322 @@
+input LoginInput {
+    email: String!
+    password: String!
+}
+
+input AuthorizeInput {
+    accessToken: String!
+    refreshToken: String!
+}
+
+input LogoutInput {
+    _empty: String
+}
+
+input VerifyEmailInput {
+    token: String!
+}
+
+input ResendVerificationInput {
+    userId: String!
+    # accessToken is read from Authorization header
+}
+
+input UpdateProfileInput {
+    updates: ProfileUpdatesInput!
+    # accessToken is read from Authorization header
+}
+
+input GetUserInput {
+    userId: String!
+    # accessToken is read from Authorization header
+}
+
+input DeleteUserInput {
+    userId: String!
+    # accessToken is read from Authorization header
+}
+
+input GetProfileInput {
+    # Dummy field - no actual input needed, uses authenticated user's token from header
+    _dummy: String
+}
+
+input ProfileUpdatesInput {
+    firstName: String
+    lastName: String
+    phone: String
+    profileImage: String
+    # Only these fields can be updated by users in their own profile
+    # email, role, companyId, storeId cannot be updated
+}
+
+input ResetPasswordInput {
+    otp: String!
+    newPassword: String!
+}
+
+input ForgotPasswordInput {
+    email: String!
+}
+
+input ChangePasswordInput {
+    currentPassword: String!
+    newPassword: String!
+    # accessToken is read from Authorization header
+}
+
+input CompanyRegistrationInput {
+    name: String!
+    registrationNumber: String!
+    businessType: String!
+    currencyCode: String!
+    address: AddressInput!
+    description: String
+}
+
+input AdminRegistrationInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String!
+    phone: String!
+    profileImage: String
+}
+
+input StoreRegistrationInput {
+    name: String!
+    address: AddressInput!
+}
+
+input RegisterCompanyInput {
+    company: CompanyRegistrationInput!
+    admin: AdminRegistrationInput!
+    store: StoreRegistrationInput!
+}
+
+input ApproveCompanyInput {
+    companyId: String!
+    # accessToken is read from Authorization header
+}
+
+input AddressInput {
+    country: String!
+    province: String!
+    district: String!
+    sector: String!
+    cell: String!
+    village: String!
+    streetAddress: String!
+}
+
+input StoreUpdatesInput {
+    name: String
+    address: AddressInput
+    status: String
+    supplierIds: [String]
+}
+
+input UpdateStoreInput {
+    storeId: String!
+    updates: StoreUpdatesInput!
+    # accessToken is read from Authorization header
+}
+
+input CreateStoreInput {
+    companyId: String!
+    name: String!
+    address: AddressInput!
+    # accessToken is read from Authorization header
+}
+
+input AssignStoreAdminInput {
+    storeId: String!
+    userId: String!
+    # accessToken is read from Authorization header
+}
+
+input UpdateStoreStatusInput {
+    storeId: String!
+    status: StoreStatus!
+    # accessToken is read from Authorization header
+}
+
+input CreateUserInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+    phone: String
+    profileImage: String
+    role: UserRole
+    companyId: String!
+    storeId: String
+
+}
+
+input ListStoreUsersInput {
+    storeId: String!
+    # accessToken is read from Authorization header
+}
+
+input UpdateUserRoleInput {
+    userId: String!
+    role: UserRole!
+    companyId: String!
+    storeId: String
+    # accessToken is read from Authorization header
+}
+
+input AdminChangePasswordInput {
+    userId: String!
+    newPassword: String!
+    # accessToken is read from Authorization header
+}
+
+input AdminResetPasswordInput {
+    userId: String!
+    # accessToken is read from Authorization header
+}
+
+input AdminResendVerificationInput {
+    userId: String!
+    # accessToken is read from Authorization header
+}
+
+input ListStoresUsersInput {
+    storeIds: [String!]!
+    # accessToken is read from Authorization header
+}
+
+input ListCompanyUsersInput {
+    companyId: String!
+    # accessToken is read from Authorization header
+}
+
+input UserUpdatesInput {
+    firstName: String
+    lastName: String
+    email: String
+    phone: String
+    profileImage: String
+    # password cannot be updated through this endpoint (use password reset)
+    # role cannot be updated through this endpoint (use updateUserRole)
+    # accountStatus cannot be updated through this endpoint
+}
+
+input UpdateUserInput {
+    userId: String!
+    updates: UserUpdatesInput!
+    # accessToken is read from Authorization header
+}
+
+input CreateSupplierInput {
+    name: String!
+    email: String
+    phone: String
+    address: AddressInput
+    # accessToken is read from Authorization header
+}
+
+input SupplierUpdatesInput {
+    name: String
+    email: String
+    phone: String
+    address: AddressInput
+}
+
+input UpdateSupplierInput {
+    supplierId: String!
+    updates: SupplierUpdatesInput!
+    # accessToken is read from Authorization header
+}
+
+input AddStoreSupplierInput {
+    storeId: String!
+    supplierId: String!
+    # accessToken is read from Authorization header
+}
+
+input RemoveStoreSupplierInput {
+    storeId: String!
+    supplierId: String!
+    # accessToken is read from Authorization header
+}
+
+input SearchSuppliersInput {
+    name: String
+    # accessToken is read from Authorization header
+}
+
+input CreateCustomerInput {
+    companyId: String!
+    name: String!
+    type: CustomerType!
+    phone: String!
+    email: String
+    tin: String
+    address: AddressInput
+    # accessToken is read from Authorization header
+    # tin is required if type is COMPANY
+}
+
+input ListCustomersInput {
+    companyId: String!
+    # accessToken is read from Authorization header
+}
+
+input GetCustomerInput {
+    companyId: String!
+    customerId: String!
+    # accessToken is read from Authorization header
+}
+
+input CustomerUpdatesInput {
+    name: String
+    type: CustomerType
+    phone: String
+    email: String
+    tin: String
+    address: AddressInput
+    # Setting email or tin to empty string removes the value
+    # tin is required when type is COMPANY
+}
+
+input UpdateCustomerInput {
+    companyId: String!
+    customerId: String!
+    updates: CustomerUpdatesInput!
+    # accessToken is read from Authorization header
+}
+
+input DeleteCustomerInput {
+    companyId: String!
+    customerId: String!
+    # accessToken is read from Authorization header
+}
+
+input UpdateCompanyStatusInput {
+    companyId: String!
+    status: String!
+    # accessToken is read from Authorization header
+}
+
+input UpdateCompanyAdminStatusInput {
+    companyId: String!
+    userId: String!
+    status: String!
+    # accessToken is read from Authorization header
+}
+
+input RequestVerificationOtpInput {
+    email: String!
+}
+
+input VerifyEmailOtpInput {
+    email: String!
+    otp: String!
+}
+
+input ListStoresInput {
+    companyId: String!
+    # accessToken is read from Authorization header
+}

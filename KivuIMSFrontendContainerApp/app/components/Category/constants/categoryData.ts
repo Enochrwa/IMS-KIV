@@ -1,0 +1,187 @@
+import { CATEGORY_STATUS } from "../enums/categoryEnums";
+import { Category } from "../types/categoryTypes";
+
+export const CategoryData: Category[] = [
+  {
+    id: "1",
+    name: "Electronics",
+    description: "All electronic items and devices",
+    parentId: null,
+    path: "/electronics",
+    depth: 0,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:00:00Z",
+    updatedBy: "admin",
+    updatedAt: "2025-01-02T10:00:00Z"
+  },
+  {
+    id: "2",
+    name: "Phones",
+    description: "All kinds of phones",
+    parentId: "1",
+    path: "/electronics/phones",
+    depth: 1,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:10:00Z"
+  },
+  {
+    id: "3",
+    name: "Smartphones",
+    description: "Modern touchscreen phones",
+    parentId: "2",
+    path: "/electronics/phones/smartphones",
+    depth: 2,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:15:00Z"
+  },
+  {
+    id: "4",
+    name: "Android Phones",
+    description: "Android OS smartphones",
+    parentId: "3",
+    path: "/electronics/phones/smartphones/android",
+    depth: 3,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:20:00Z"
+  },
+  {
+    id: "5",
+    name: "iPhones",
+    description: "Apple iPhones",
+    parentId: "3",
+    path: "/electronics/phones/smartphones/iphone",
+    depth: 3,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:25:00Z"
+  },
+  {
+    id: "6",
+    name: "Laptops",
+    description: "Portable computers and notebooks",
+    parentId: "1",
+    path: "/electronics/laptops",
+    depth: 1,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:30:00Z"
+  },
+  {
+    id: "7",
+    name: "Gaming Laptops",
+    description: "High-performance laptops for gaming",
+    parentId: "6",
+    path: "/electronics/laptops/gaming",
+    depth: 2,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:35:00Z"
+  },
+  {
+    id: "8",
+    name: "Accessories",
+    description: "Electronic accessories",
+    parentId: "1",
+    path: "/electronics/accessories",
+    depth: 1,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:40:00Z"
+  },
+  {
+    id: "9",
+    name: "Headphones",
+    description: "Wired and wireless headphones",
+    parentId: "8",
+    path: "/electronics/accessories/headphones",
+    depth: 2,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:45:00Z"
+  },
+  {
+    id: "10",
+    name: "Wireless Headphones",
+    description: "Bluetooth and over-ear models",
+    parentId: "9",
+    path: "/electronics/accessories/headphones/wireless",
+    depth: 3,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:50:00Z"
+  },
+  {
+    id: "11",
+    name: "Chargers",
+    description: "Phone and laptop chargers",
+    parentId: "8",
+    path: "/electronics/accessories/chargers",
+    depth: 2,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T08:55:00Z"
+  },
+  {
+    id: "12",
+    name: "Furniture",
+    description: "Office and home furniture",
+    parentId: null,
+    path: "/furniture",
+    depth: 0,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T09:00:00Z"
+  },
+  {
+    id: "13",
+    name: "Office Furniture",
+    description: "Desks, chairs, and cabinets for offices",
+    parentId: "12",
+    path: "/furniture/office",
+    depth: 1,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T09:05:00Z"
+  },
+  {
+    id: "14",
+    name: "Office Chairs",
+    description: "Adjustable and ergonomic chairs",
+    parentId: "13",
+    path: "/furniture/office/chairs",
+    depth: 2,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T09:10:00Z"
+  },
+  {
+    id: "15",
+    name: "Home Furniture",
+    description: "Sofas, beds, and dining tables",
+    parentId: "12",
+    path: "/furniture/home",
+    depth: 1,
+    status: CATEGORY_STATUS.ACTIVE,
+    companyId: "company-123",
+    createdBy: "admin",
+    createdAt: "2025-01-01T09:15:00Z"
+  }
+];

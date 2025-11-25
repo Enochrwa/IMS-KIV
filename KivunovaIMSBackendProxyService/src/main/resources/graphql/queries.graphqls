@@ -1,0 +1,11 @@
+type Query {
+    listStoreUsers(input: ListStoreUsersInput!): ListStoreUsersResponse
+    listCompanyUsers(input: ListCompanyUsersInput!): ListCompanyUsersResponse
+    listStoresUsers(input: ListStoresUsersInput!): ListStoresUsersResponse
+    listStores(input: ListStoresInput!): ListStoresResponse
+    listCustomers(input: ListCustomersInput!): ListCustomersResponse
+    getCustomer(input: GetCustomerInput!): GetCustomerResponse
+    getProfile(input: GetProfileInput!): GetProfileResponse
+    getUser(input: GetUserInput!): GetUserResponse
+    searchSuppliers(input: SearchSuppliersInput!): SearchSuppliersResponse
+}

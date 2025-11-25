@@ -1,0 +1,5 @@
+export enum CATEGORY_STATUS {
+  ACTIVE = "ACTIVE",
+  INACTIVE = "INACTIVE",
+  DELETED = "DELETED"
+}

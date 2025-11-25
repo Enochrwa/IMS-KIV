@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login UI Component renders all main elements 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-17vvh6y"
+  >
+    <div
+      class="MuiBox-root css-njzzp3"
+    >
+      <div
+        class="MuiBox-root css-127oxiz"
+        data-testid="auth-left-panel"
+      >
+        <div
+          class="MuiBox-root css-s6lh4k"
+        >
+          <div
+            class="MuiBox-root css-1qcrck8"
+          >
+            <img
+              alt="Kivu IMS Logo"
+              data-testid="auth-logo"
+              src="test-file-stub"
+              style="width: 400px; margin: auto;"
+            />
+          </div>
+          <div
+            class="MuiBox-root css-1mmnsqo"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-h6 css-dsixvh-MuiTypography-root"
+              data-testid="auth-left-text"
+            >
+              Re-imagining inventory management experience with advance data analytics for optimum performance
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-vcuh2c"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-okytkp-MuiTypography-root"
+            data-testid="auth-left-footer"
+          >
+            © kivunova 2025
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      data-testid="mock-auth-right-panel"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 css-eybs0x-MuiPaper-root"
+        data-testid="login-right-panel"
+        style="--Paper-shadow: none;"
+      >
+        <h5
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-vso9nb-MuiTypography-root"
+          data-testid="login-title"
+        >
+           Login
+        </h5>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-19fh7p6-MuiTypography-root"
+          data-testid="login-subtitle"
+        >
+          Welcome back! Please enter your details.
+        </p>
+        <form
+          class="MuiBox-root css-o8u0d7"
+          data-testid="login-form"
+          novalidate=""
+        >
+          <div
+            class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-16bevx5-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              for="email"
+              id="email-label"
+            >
+              Email
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
+                data-testid="login-email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                type="email"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-1n64csd-MuiNotchedOutlined-root"
+                >
+                  <span>
+                    Email
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-16bevx5-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              for="password"
+              id="password-label"
+            >
+              Password
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
+                data-testid="login-password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                type="password"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-1n64csd-MuiNotchedOutlined-root"
+                >
+                  <span>
+                    Password
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            class="MuiBox-root css-1gte0kt"
+          >
+            <label
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
+            >
+              <span
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+              >
+                <input
+                  class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                  data-indeterminate="false"
+                  data-testid="login-remember"
+                  name="remember"
+                  type="checkbox"
+                  value="false"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                  data-testid="CheckBoxOutlineBlankIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
+              >
+                Remember me
+              </span>
+            </label>
+            <button
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover MuiLink-button css-18fc82s-MuiTypography-root-MuiLink-root"
+              data-testid="login-forgot-password"
+              type="button"
+            >
+              Forgot password?
+            </button>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-upew2w-MuiButtonBase-root-MuiButton-root"
+            data-testid="login-submit"
+            tabindex="0"
+            type="submit"
+          >
+            Login in
+          </button>
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-173muyk-MuiTypography-root"
+            data-testid="login-signup-text"
+            style="--Typography-textAlign: center;"
+          >
+             Don't have an account? 
+            <button
+              class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover MuiLink-button css-1b1ygic-MuiTypography-root-MuiLink-root"
+              data-testid="login-signup"
+              type="button"
+            >
+              Sign up
+            </button>
+          </p>
+        </form>
+        <div
+          class="MuiBox-root css-aqjv43"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-okytkp-MuiTypography-root"
+            data-testid="login-left-footer"
+          >
+            © kivunova 2025
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

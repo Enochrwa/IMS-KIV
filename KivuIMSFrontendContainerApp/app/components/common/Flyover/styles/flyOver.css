@@ -1,0 +1,58 @@
+.flyover {
+  position: fixed;
+  top: 0;
+  left: 0; /* open from left side */
+  width: 100%;
+  height: 100%;
+  background: rgba(211, 209, 209, 0.55);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  z-index: 100000032;
+}
+
+/* When open, slide in from left */
+.flyover.open {
+  transform: translateX(0);
+}
+
+/* Content wrapper */
+.flyover .overlay-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left section (purple child content) */
+.flyover .flyover-left {
+  color: white;
+  width: auto;
+  height: 100%;
+  overflow-y: auto;
+  background: red;
+}
+
+/* Right side overlay (clickable area to close) */
+.flyover .flyover-right-side {
+  background: transparent;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+/* Close icon style */
+.flyover .flyover-right-side svg {
+  color: #000;
+  background: white;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}

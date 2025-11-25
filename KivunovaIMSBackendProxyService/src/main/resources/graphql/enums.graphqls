@@ -1,0 +1,43 @@
+enum StoreStatus {
+    PENDING
+    ACTIVE
+    SUSPENDED
+    DELETED
+}
+
+enum UserRole {
+    PRIMARY_SUPER_ADMIN
+    SECONDARY_SUPER_ADMIN
+    COMPANY_ADMIN
+    STORE_ADMIN
+    INVENTORY_CLERK
+    WAREHOUSE_MANAGER
+    SALES_PROCUREMENT
+    BUYER
+    ANALYST
+}
+
+enum AccountStatus {
+	INVITED
+	ACTIVE
+	SUSPENDED
+	DELETED
+}
+
+enum CustomerType {
+	INDIVIDUAL
+	COMPANY
+}
+
+enum SupplierStatus {
+	ACTIVE
+	SUSPENDED
+	DELETED
+}
+
+enum CompanyStatus {
+	PENDING
+	ACTIVE
+	SUSPENDED
+	DELETED
+}

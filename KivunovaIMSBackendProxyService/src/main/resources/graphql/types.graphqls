@@ -1,0 +1,303 @@
+type LoginResponse {
+    code: String!
+    accessToken: String
+    refreshToken: String
+    emailVerified: Boolean
+    passwordChangeRequired: Boolean
+}
+
+type LogoutResponse {
+    code: String!
+}
+
+type ForgotPasswordResponse {
+    code: String!
+}
+
+type ResetPasswordResponse {
+    code: String!
+}
+
+type ChangePasswordResponse {
+    code: String!
+}
+
+type AuthorizeResponse {
+    code: String!
+    authorized: Boolean!
+    userId: String
+    role: String
+    companyId: String
+    storeId: String
+    accessToken: String
+    refreshToken: String
+}
+
+type RegisterSuccess {
+    code: String!
+    companyId: String!
+    userId: String!
+    companyStatus: String!
+    adminStatus: String!
+    storeId: String!
+    storeStatus: String!
+}
+
+type RegisterError {
+    code: String!
+}
+
+type RegisterResponse {
+    code: String!
+    companyId: String
+    userId: String
+    companyStatus: String
+    adminStatus: String
+    storeId: String
+    storeStatus: String
+}
+
+type Company {
+    id: String!
+    name: String!
+    registrationNumber: String!
+    businessType: String!
+    currencyCode: String!
+    address: Address
+    description: String
+    status: CompanyStatus!
+}
+
+type ApproveCompanyResponse {
+    code: String!
+    company: Company
+}
+
+type UpdateCompanyStatusResponse {
+    code: String!
+    company: Company
+}
+
+type UpdateCompanyAdminStatusResponse {
+    code: String!
+    user: User
+}
+
+type CreateUserResponse {
+    code: String!
+    user: User
+}
+
+type UpdateUserResponse {
+    code: String!
+    user: User
+}
+
+type UpdateUserRoleResponse {
+    code: String!
+    user: User
+}
+
+type ListCompanyUsersResponse {
+    code: String!
+    users: [User!]!
+}
+
+type ListStoreUsersResponse {
+    code: String!
+    users: [User!]!
+}
+
+type ListStoresUsersResponse {
+    code: String!
+    users: [User!]!
+}
+
+type AdminResetPasswordResponse {
+    code: String!
+}
+
+type AdminResendVerificationResponse {
+    code: String!
+}
+
+type RequestVerificationOtpResponse {
+    code: String!
+}
+
+type VerifyEmailOtpResponse {
+    code: String!
+}
+
+type Address {
+    country: String
+    province: String
+    district: String
+    sector: String
+    cell: String
+    village: String
+    streetAddress: String
+}
+
+type Store {
+    id: String
+    companyId: String
+    name: String
+    address: Address
+    status: StoreStatus
+}
+
+type ListStoresResponse {
+    code: String!
+    stores: [Store!]!
+}
+
+type CreateStoreResponse {
+    code: String!
+    store: Store
+}
+
+type AdminChangePasswordResponse {
+    code: String!
+}
+
+type VerifyEmailResponse {
+    code: String!
+}
+
+type ResendVerificationResponse {
+    code: String!
+}
+
+type GetProfileResponse {
+    code: String!
+    user: User
+}
+
+type UpdateProfileResponse {
+    code: String!
+    user: User
+}
+
+type User {
+    id: String!
+    firstName: String
+    lastName: String
+    email: String
+    phone: String
+    profileImage: String
+    role: UserRole
+    companyId: String
+    storeId: String
+    emailVerified: Boolean
+    passwordChangeRequired: Boolean
+}
+
+type AssignStoreAdminResponse {
+    code: String!
+    user: User
+}
+
+type UpdateStoreResponse {
+    code: String!
+    store: Store
+}
+
+type UpdateStoreStatusResponse {
+    code: String!
+    storeId: String
+    status: StoreStatus
+}
+
+type GetUserResponse {
+    code: String!
+    user: User
+}
+
+type DeleteUserResponse {
+    code: String!
+}
+
+type Customer {
+    id: String!
+    companyId: String!
+    name: String!
+    type: CustomerType!
+    phone: String!
+    email: String
+    tin: String
+    address: Address
+}
+
+type CreateCustomerResponse {
+    code: String!
+    customer: Customer
+}
+
+type ListCustomersResponse {
+    code: String!
+    customers: [Customer!]!
+}
+
+type GetCustomerResponse {
+    code: String!
+    customer: Customer
+}
+
+type UpdateCustomerResponse {
+    code: String!
+    customer: Customer
+}
+
+type DeleteCustomerResponse {
+    code: String!
+}
+
+type Supplier {
+    id: String!
+    name: String!
+    email: String
+    phone: String
+    address: Address
+    status: SupplierStatus!
+}
+
+type CreateSupplierResponse {
+    id: String!
+    name: String!
+    email: String
+    phone: String
+    address: Address
+    status: SupplierStatus!
+}
+
+type UpdateSupplierResponse {
+    id: String!
+    name: String!
+    email: String
+    phone: String
+    address: Address
+    status: SupplierStatus!
+}
+
+type AddStoreSupplierResponse {
+    id: String!
+    companyId: String!
+    name: String!
+    address: Address
+    status: StoreStatus!
+    supplierIds: [String!]!
+}
+
+type RemoveStoreSupplierResponse {
+    id: String!
+    companyId: String!
+    name: String!
+    address: Address
+    status: StoreStatus!
+    supplierIds: [String!]!
+}
+
+type SearchSuppliersResponse {
+    suppliers: [Supplier!]!
+}

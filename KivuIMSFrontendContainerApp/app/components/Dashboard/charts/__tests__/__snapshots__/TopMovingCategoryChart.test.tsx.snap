@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopMovingCategoryChart renders without crashing - empty 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters css-1a1iu8h-MuiPaper-root-MuiAccordion-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="true"
+        class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters css-10nzs31-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content Mui-expanded MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-izap9d-MuiTypography-root"
+          >
+            Top Moving Category
+          </p>
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1lj39kh-MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiBox-root css-1ugxv8g"
+              >
+                <div
+                  class="css-17p70vv-MuiChartsWrapper-root"
+                >
+                  <svg
+                    class="css-2z0uug-MuiChartsSurface-root"
+                    viewBox="0 0 100 300"
+                  >
+                    <g>
+                      <g
+                        class="MuiPieChart-series"
+                        data-series="auto-generated-id-0"
+                        transform="translate(50, 150)"
+                      />
+                      <g
+                        class="MuiPieChart-seriesLabels"
+                        data-series="auto-generated-id-0"
+                        transform="translate(50, 150)"
+                      />
+                    </g>
+                    <text
+                      class="css-1f57y8b"
+                      x="50"
+                      y="150"
+                    >
+                      No data to display
+                    </text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TopMovingCategoryChart renders without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAccordion-root MuiAccordion-rounded Mui-expanded MuiAccordion-gutters css-1a1iu8h-MuiPaper-root-MuiAccordion-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <h3
+      class="MuiAccordion-heading css-cy7rkm-MuiAccordion-heading"
+    >
+      <button
+        aria-expanded="true"
+        class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded MuiAccordionSummary-gutters css-10nzs31-MuiButtonBase-root-MuiAccordionSummary-root"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiAccordionSummary-content Mui-expanded MuiAccordionSummary-contentGutters css-yfrx4k-MuiAccordionSummary-content"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-izap9d-MuiTypography-root"
+          >
+            Top Moving Category
+          </p>
+        </span>
+        <span
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-1wqf3nl-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </span>
+      </button>
+    </h3>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-qr6njo-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region css-at4ued-MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-1lj39kh-MuiAccordionDetails-root"
+            >
+              <div
+                class="MuiBox-root css-1ugxv8g"
+              >
+                <div
+                  class="css-17p70vv-MuiChartsWrapper-root"
+                >
+                  <ul
+                    class="MuiChartsLegend-root MuiChartsLegend-horizontal css-jxda4w-MuiChartsLegend-root"
+                  >
+                    <li
+                      class="MuiChartsLegend-item"
+                      data-series="0"
+                    >
+                      <div
+                        class="MuiChartsLegend-series"
+                      >
+                        <div
+                          aria-hidden="true"
+                          class="MuiChartsLabelMark-root MuiChartsLabelMark-circle MuiChartsLegend-mark css-1jbxaz3-MuiChartsLabelMark-root"
+                        >
+                          <div
+                            class="MuiChartsLabelMark-mask"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                class="MuiChartsLabelMark-fill"
+                                cx="12"
+                                cy="12"
+                                fill="#4254FB"
+                                r="12"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <span
+                          class="MuiChartsLabel-root MuiChartsLegend-label"
+                        >
+                          Electronics
+                        </span>
+                      </div>
+                    </li>
+                    <li
+                      class="MuiChartsLegend-item"
+                      data-series="1"
+                    >
+                      <div
+                        class="MuiChartsLegend-series"
+                      >
+                        <div
+                          aria-hidden="true"
+                          class="MuiChartsLabelMark-root MuiChartsLabelMark-circle MuiChartsLegend-mark css-1jbxaz3-MuiChartsLabelMark-root"
+                        >
+                          <div
+                            class="MuiChartsLabelMark-mask"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                class="MuiChartsLabelMark-fill"
+                                cx="12"
+                                cy="12"
+                                fill="#FFB422"
+                                r="12"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <span
+                          class="MuiChartsLabel-root MuiChartsLegend-label"
+                        >
+                          Clothing
+                        </span>
+                      </div>
+                    </li>
+                    <li
+                      class="MuiChartsLegend-item"
+                      data-series="2"
+                    >
+                      <div
+                        class="MuiChartsLegend-series"
+                      >
+                        <div
+                          aria-hidden="true"
+                          class="MuiChartsLabelMark-root MuiChartsLabelMark-circle MuiChartsLegend-mark css-1jbxaz3-MuiChartsLabelMark-root"
+                        >
+                          <div
+                            class="MuiChartsLabelMark-mask"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                class="MuiChartsLabelMark-fill"
+                                cx="12"
+                                cy="12"
+                                fill="#FA4F58"
+                                r="12"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <span
+                          class="MuiChartsLabel-root MuiChartsLegend-label"
+                        >
+                          Groceries
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <svg
+                    class="css-2z0uug-MuiChartsSurface-root"
+                    viewBox="0 0 100 300"
+                  >
+                    <g>
+                      <g
+                        class="MuiPieChart-series"
+                        data-series="auto-generated-id-0"
+                        transform="translate(50, 150)"
+                      >
+                        <g>
+                          <path
+                            class="MuiPieArc-root MuiPieArc-series-auto-generated-id-0 MuiPieArc-data-index-0 css-xsebbt-MuiPieArc-root"
+                            cursor="unset"
+                            d="M1.761,-47.309A2.5,2.5,0,0,1,4.485,-49.798A50,50,0,0,1,33.292,37.305A2.5,2.5,0,0,1,29.62,36.93L29.62,36.93A2.5,2.5,0,0,1,29.963,33.574A45,45,0,0,0,4.037,-44.819A2.5,2.5,0,0,1,1.761,-47.309Z"
+                            fill="#4254FB"
+                            filter="none"
+                            opacity="1"
+                            stroke="#fff"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                            visibility="visible"
+                          />
+                          <path
+                            class="MuiPieArc-root MuiPieArc-series-auto-generated-id-0 MuiPieArc-data-index-1 css-xsebbt-MuiPieArc-root"
+                            cursor="unset"
+                            d="M26.793,39.03A2.5,2.5,0,0,1,26.09,42.653A50,50,0,0,1,-37.737,32.801A2.5,2.5,0,0,1,-37.315,29.134L-37.315,29.134A2.5,2.5,0,0,1,-33.964,29.521A45,45,0,0,0,23.481,38.388A2.5,2.5,0,0,1,26.793,39.03Z"
+                            fill="#FFB422"
+                            filter="none"
+                            opacity="1"
+                            stroke="#fff"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                            visibility="visible"
+                          />
+                          <path
+                            class="MuiPieArc-root MuiPieArc-series-auto-generated-id-0 MuiPieArc-data-index-2 css-xsebbt-MuiPieArc-root"
+                            cursor="unset"
+                            d="M-39.377,26.28A2.5,2.5,0,0,1,-42.991,25.53A50,50,0,0,1,-4.485,-49.798A2.5,2.5,0,0,1,-1.761,-47.309L-1.761,-47.309A2.5,2.5,0,0,1,-4.037,-44.819A45,45,0,0,0,-38.692,22.977A2.5,2.5,0,0,1,-39.377,26.28Z"
+                            fill="#FA4F58"
+                            filter="none"
+                            opacity="1"
+                            stroke="#fff"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                            visibility="visible"
+                          />
+                        </g>
+                      </g>
+                      <g
+                        class="MuiPieChart-seriesLabels"
+                        data-series="auto-generated-id-0"
+                        transform="translate(50, 150)"
+                      >
+                        <g>
+                          <text
+                            class="MuiPieArcLabel-root MuiPieArcLabel-series-auto-generated-id-0 css-1vffdx8-MuiPieArcLabel-root"
+                            x="45.09771018799043"
+                            y="-14.914641658451739"
+                          >
+                            40
+                          </text>
+                          <text
+                            class="MuiPieArcLabel-root MuiPieArcLabel-series-auto-generated-id-0 css-1vffdx8-MuiPieArcLabel-root"
+                            x="-7.2463447235572875"
+                            y="46.9440144017038"
+                          >
+                            25
+                          </text>
+                          <text
+                            class="MuiPieArcLabel-root MuiPieArcLabel-series-auto-generated-id-0 css-1vffdx8-MuiPieArcLabel-root"
+                            x="-42.29454571922983"
+                            y="-21.61993067528149"
+                          >
+                            35
+                          </text>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
