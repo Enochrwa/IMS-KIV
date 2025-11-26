@@ -14,7 +14,7 @@ import { API_RESPONSE_CODE } from "../../../Enums/api";
 export interface VerifyEmailProps {
   otpType: OTPType;
   onBackToLogin: () => void;
-  onVerifySuccess: () => void;
+  onVerifySuccess: (token: string) => void;
   loginInfo: string;
 }
 
@@ -66,9 +66,9 @@ const OtpVerification: React.FC<VerifyEmailProps> = ({
           },
           {
             onSuccess: (response) => {
-              const { code } = response.verifyEmailOtp;
+              const { code, verificationToken } = response.verifyEmailOtp;
               if (code === API_RESPONSE_CODE.OK) {
-                onVerifySuccess();
+                onVerifySuccess(verificationToken);
               } else {
                 setAlert({
                   severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
