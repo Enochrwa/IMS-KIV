@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  BusinessType,
+  BusinessTypeNamingMapping,
   CountryFullName,
   SupportedCurrencyCountryMap,
   useKivunovaTranslation,
@@ -129,17 +131,44 @@ const CompanyInfoForm: React.FC<CompanyInfoFormProps> = ({
       <Controller
         name="company.businessType"
         control={control}
-        render={({ field }) => (
-          <TextField
-            required
-            {...field}
-            label={t("business-type", "Business Type")}
-            error={!!errors?.company?.businessType}
-            helperText={errors?.company?.businessType?.message}
-            id="registration-businessType-input"
-            inputProps={{ "data-testid": "registration-companyName" }}
-          />
-        )}
+        render={({ field }) => {
+          return (
+            <FormControl style={{ width: "100%" }}>
+              <InputLabel shrink id="business-type-select-label">
+                {t("business-type-label-text", "Business Type")}
+              </InputLabel>
+              <Select
+                {...field}
+                labelId="business-type-select-label"
+                id="business-type-select"
+                required
+                label={t("business-type", "Business Type")}
+                fullWidth
+                error={!!errors?.company?.businessType}
+                value={field.value}
+                inputProps={{ "data-testid": "registration-businessType" }}
+              >
+                {Object.values(BusinessType).map((type) => (
+                  <MenuItem
+                    key={type}
+                    value={type}
+                    id={`registration-businessType-${type}`}
+                  >
+                    {t(
+                      `business-type-${BusinessTypeNamingMapping[type]}`,
+                      BusinessTypeNamingMapping[type]
+                    )}
+                  </MenuItem>
+                ))}
+              </Select>
+              {errors?.company?.businessType?.message && (
+                <FormHelperText error={!!errors?.company?.businessType}>
+                  {errors?.company?.businessType?.message}
+                </FormHelperText>
+              )}
+            </FormControl>
+          );
+        }}
       />
 
       <Controller
@@ -174,7 +203,8 @@ const CompanyInfoForm: React.FC<CompanyInfoFormProps> = ({
                 required
                 label={t("currency-code", "Currency Code")}
                 fullWidth
-                value={field.value || "RWF"}
+                error={!!errors?.company?.currencyCode}
+                value={field.value}
                 inputProps={{ "data-testid": "registration-currencyCode" }}
               >
                 {Object.values(SupportedCurrencyCountryMap).map((c) => (
@@ -188,7 +218,7 @@ const CompanyInfoForm: React.FC<CompanyInfoFormProps> = ({
                 ))}
               </Select>
               {errors?.company?.currencyCode?.message && (
-                <FormHelperText>
+                <FormHelperText error={!!errors?.company?.currencyCode}>
                   {errors?.company?.currencyCode?.message}
                 </FormHelperText>
               )}

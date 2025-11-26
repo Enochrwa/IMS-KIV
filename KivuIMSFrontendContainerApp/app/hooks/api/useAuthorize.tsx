@@ -3,11 +3,12 @@ import { useContext, useState } from "react";
 import AlertBannerContext from "../../context/alertBannerContext";
 import { AuthContextInfo } from "../../context/types/authContextType";
 import { AUTH_STATUS } from "../../context/enums/authEnums";
-import { AuthorizeResponse } from "../../Graphql/types/auth";
+import { AuthorizeRequest, AuthorizeResponse } from "../../Graphql/types/auth";
 import { fetchGraphQL } from "../../Graphql/utils";
 import { authorizeQuery } from "../../Graphql/querries/authQuery";
 import { LOCAL_STORAGE_KEYS } from "../../Enums/localStorage";
 import { getLocalStorageElement } from "../../Utils/localStorageUtils";
+import { API_RESPONSE_CODE } from "../../Enums/api";
 
 const useAuthorize = () => {
   const { setAlert } = useContext(AlertBannerContext);
@@ -15,24 +16,39 @@ const useAuthorize = () => {
     auth: { status: AUTH_STATUS.UNAUTHENTICATED }
   });
 
-  const accessToken = getLocalStorageElement(LOCAL_STORAGE_KEYS.ACCESS_TOKEN);
-
-  return useMutation<AuthorizeResponse, Error>({
+  return useMutation<AuthorizeResponse, Error, AuthorizeRequest>({
     mutationKey: ["authorize"],
-    mutationFn: () =>
-      fetchGraphQL(authorizeQuery, { input: { token: accessToken } }, setAlert),
+    mutationFn: () => {
+      const input: AuthorizeRequest = {
+        accessToken: getLocalStorageElement(LOCAL_STORAGE_KEYS.ACCESS_TOKEN),
+        refreshToken: getLocalStorageElement(LOCAL_STORAGE_KEYS.REFRESH_TOKEN)
+      };
+      return fetchGraphQL(authorizeQuery, { input }, setAlert);
+    },
     onSuccess: (response) => {
-      const { code, valid } = response.validateToken;
+      const { code, authorized, refreshToken, accessToken } =
+        response.authorize;
 
-      if (code === "OK" && valid) {
+      if (code === API_RESPONSE_CODE.OK && authorized) {
+        // set token data when token are refreshed
+
+        if (accessToken) {
+          localStorage.setItem(LOCAL_STORAGE_KEYS.ACCESS_TOKEN, accessToken);
+        }
+
+        if (refreshToken) {
+          localStorage.setItem(LOCAL_STORAGE_KEYS.REFRESH_TOKEN, refreshToken);
+        }
+
         updateAuthContextInfo({
           ...authContextInfo,
           auth: {
-            status: AUTH_STATUS.AUTHENTICATED
+            status: AUTH_STATUS.AUTHENTICATED,
+            authorized
           }
         });
       } else {
-        localStorage.removeItem(LOCAL_STORAGE_KEYS.TOKEN);
+        localStorage.removeItem(LOCAL_STORAGE_KEYS.REFRESH_TOKEN);
         localStorage.removeItem(LOCAL_STORAGE_KEYS.ACCESS_TOKEN);
         throw new Error("UNAUTHORIZED");
       }

@@ -1,10 +1,17 @@
 import { LOGOUT_STATUS } from "../../context/enums/authEnums";
 
 export interface AuthorizeResponse {
-  validateToken: {
+  authorize: {
     code: string;
-    valid: boolean;
+    authorized: boolean;
+    accessToken: string;
+    refreshToken: string;
   };
+}
+
+export interface AuthorizeRequest {
+  accessToken: string;
+  refreshToken: string;
 }
 
 export interface LogoutResponse {

@@ -6,7 +6,7 @@ export interface OtpCInfo {
 
 export interface AuthStatus {
   status: AUTH_STATUS;
-  userId?: string;
+  authorized?: boolean;
 }
 
 export interface AuthContextInfo {

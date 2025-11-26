@@ -1,8 +1,10 @@
 export const authorizeQuery = `
- query validateToken($input: ValidateTokenInput!) {
-      validateToken(input: $input) {
+ mutation Authorize($input: AuthorizeInput!) {
+      authorize(input: $input) {
         code
-        valid
+        authorized
+        accessToken
+        refreshToken
     }
  }
 `;

@@ -2,23 +2,18 @@ import { useMutation } from "@tanstack/react-query";
 import { useContext } from "react";
 import AlertBannerContext from "../../context/alertBannerContext";
 import { fetchGraphQL } from "../../Graphql/utils";
-import { verifyOTPQuery } from "../../Graphql/querries/verifyOTPQuery";
+import { verifyEmailOtpQuery } from "../../Graphql/querries/verifyOTPQuery";
 import {
-  VerifyOTPRequest,
-  VerifyOTPResponse
-} from "../../components/OTPVerification/types/otpVerificationTypes";
+  OtpVerifyEmailRequest,
+  OtpVerifyEmailResponse
+} from "../../components/common/OtpVerification/types/otpVerification";
 
-const useVerifyOTP = () => {
+export const useVerifyEmailOtp = () => {
   const { setAlert } = useContext(AlertBannerContext);
 
-  return useMutation<VerifyOTPResponse, Error, VerifyOTPRequest>({
-    mutationFn: (variables) =>
-      fetchGraphQL<{ verifyOTP: VerifyOTPResponse }, VerifyOTPRequest>(
-        verifyOTPQuery,
-        variables,
-        setAlert
-      ).then((res) => res.verifyOTP)
+  return useMutation<OtpVerifyEmailResponse, Error, OtpVerifyEmailRequest>({
+    mutationKey: ["verifyEmailOtp"],
+    mutationFn: (input) =>
+      fetchGraphQL(verifyEmailOtpQuery, { input }, setAlert)
   });
 };
-
-export default useVerifyOTP;

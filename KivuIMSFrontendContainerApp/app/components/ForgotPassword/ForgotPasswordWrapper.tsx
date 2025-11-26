@@ -2,7 +2,6 @@ import React, { ReactNode, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { KivuI18nContext, localizedPath } from "@kivunova/kivufrontendcommon";
 import ForgotOtpForm from "./ForgotPassword";
-import { OtpValidation } from "../OTPVerification/OTPVerification";
 import { ResetPasswordForm } from "../ResetPassword/ResetPassword";
 import { FORGOT_PWD_STEP } from "./Enums/forgotPasswordSteps";
 import { PAGE_ROUTE_LOGIN } from "../../PageRoutes";
@@ -10,6 +9,7 @@ import { Box } from "@mui/material";
 import AuthSidePanel from "../common/AuthSidePanel/AuthSidePanel";
 import AuthRightSidePanel from "../common/AuthSidePanel/AuthRightSidePanel";
 import SmallScreenFooter from "../common/SmallScreenFooter";
+import OtpVerification from "../common/OtpVerification/OtpVerification";
 
 /**
  * Wrapper component that manages the flow of the "Forgot Password" process.
@@ -60,10 +60,13 @@ const ForgotPasswordWrapper = () => {
   // STEP 2: OTP validation screen
   else if (currentStep === FORGOT_PWD_STEP.VALIDATE_OTP) {
     content = (
-      <OtpValidation
-        email={email}
-        setNextStep={setCurrentStep}
-        setupToken={setToken}
+      <OtpVerification
+        otpType="email"
+        onBackToLogin={() => {}}
+        onVerifySuccess={() => {
+          setToken("");
+        }}
+        loginInfo={email}
       />
     );
   }

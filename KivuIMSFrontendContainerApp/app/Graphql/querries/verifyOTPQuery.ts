@@ -6,3 +6,11 @@ export const verifyOTPQuery = `
     }
   }
 `;
+
+export const verifyEmailOtpQuery = `
+ mutation VerifyEmailOtpQuery($input: VerifyEmailOtpInput!) {
+   verifyEmailOtp(input: $input) {
+     code
+   }
+ }
+`;

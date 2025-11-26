@@ -20,6 +20,8 @@ export interface LoginResponse {
     code: string;
     accessToken: string;
     refreshToken: string;
+    passwordChangeRequired: boolean;
+    emailVerified: boolean;
   };
 }
 

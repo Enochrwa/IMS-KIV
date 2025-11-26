@@ -1,119 +1,115 @@
 import React from "react";
-import { render, screen, fireEvent, act } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
+import { render, screen, fireEvent } from "@testing-library/react";
+import AuthContext from "../../../context/authContext";
+import { AUTH_STATUS } from "../../../context/enums/authEnums";
 import Login from "../Login";
+import { LoginFormProps } from "../LoginForm";
 
-// 👇 Mock the AuthRightSidePanel to avoid LOCALE issues
-jest.mock("../../common/AuthSidePanel/AuthRightSidePanel", () => ({
-  __esModule: true,
-  default: ({ children }: { children: React.ReactNode }) => (
-    <div data-testid="mock-auth-right-panel">{children}</div>
+// Mock children components
+jest.mock("../../common/AuthSidePanel/AuthSidePanel", () =>
+  // eslint-disable-next-line react/display-name
+  () => <div data-testid="auth-side-panel">SidePanel</div>
+);
+
+jest.mock("../../common/AuthSidePanel/AuthRightSidePanel", () =>
+  // eslint-disable-next-line react/display-name, react/prop-types
+  ({ children }) => <div data-testid="auth-right-panel">{children}</div>
+);
+
+jest.mock("../LoginForm", () =>
+  // eslint-disable-next-line react/display-name, react/prop-types
+  ({ setLoginInfo }) => (
+    <div data-testid="login-form">
+      Login Form
+      <button onClick={() => setLoginInfo("test@example.com")}>
+        setLoginInfo
+      </button>
+    </div>
   )
-}));
+);
 
-// Mock the translation hook and i18n context used in the component to avoid i18n warnings
-jest.mock("@kivunova/kivufrontendcommon", () => {
-  return {
-    __esModule: true,
-    useKivunovaTranslation: () => ({ t: (k: string, d?: string) => d || k }),
-    KivuI18nContext: React.createContext({ language: "en", defaultLang: "en" }),
-    localizedPath: (path: string) => `/${path}`
-  };
-});
+jest.mock("../../common/OtpVerification/OtpVerification", () =>
+  // eslint-disable-next-line react/display-name, react/prop-types
+  ({ otpType, onBackToLogin, onVerifySuccess, loginInfo }) => (
+    <div data-testid="otp-verification">
+      OTP Verification - {otpType} - {loginInfo}
+      <button onClick={onBackToLogin}>back</button>
+      <button onClick={onVerifySuccess}>success</button>
+    </div>
+  )
+);
 
-const mockNavigate = jest.fn();
-jest.mock("react-router-dom", () => {
-  const actual = jest.requireActual("react-router-dom");
-  return {
-    ...actual,
-    useNavigate: () => mockNavigate
-  };
-});
-
-// ✅ Mock useLogin hook
-jest.mock("../../../hooks/api/useLogin", () => ({
-  __esModule: true,
-  default: () => ({
-    isPending: false,
-    mutateAsync: jest.fn().mockResolvedValue({})
-  })
-}));
-
-jest.mock("@tanstack/react-query", () => ({
-  useIsFetching: jest.fn(),
-  useIsMutating: jest.fn()
-}));
-
-// Helper to wrap components that use react-router
-const renderWithRouter = (ui: React.ReactElement) => {
-  return render(<BrowserRouter>{ui}</BrowserRouter>);
+const wrapper = (contextValue: LoginFormProps) => {
+  return render(
+    <AuthContext.Provider value={contextValue}>
+      <Login />
+    </AuthContext.Provider>
+  );
 };
 
-describe("Login UI Component", () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
+describe("<Login />", () => {
+  test("renders LoginForm by default", () => {
+    const mockUpdate = jest.fn();
 
-  it("renders all main elements", () => {
-    const { asFragment } = renderWithRouter(<Login />);
+    wrapper({
+      authContextInfo: { auth: { status: AUTH_STATUS.UNAUTHENTICATED } },
+      updateAuthContextInfo: mockUpdate
+    });
 
-    // Capture snapshot to detect unintended DOM regressions
-    expect(asFragment()).toMatchSnapshot();
-
-    // Also check main elements by test id to keep the test stable across styling changes
-    expect(screen.getByTestId("auth-left-panel")).toBeInTheDocument();
-    expect(screen.getByTestId("login-right-panel")).toBeInTheDocument();
-    expect(screen.getByTestId("auth-logo")).toBeInTheDocument();
     expect(screen.getByTestId("login-form")).toBeInTheDocument();
-    expect(screen.getByTestId("login-email")).toBeInTheDocument();
-    expect(screen.getByTestId("login-password")).toBeInTheDocument();
-    expect(screen.getByTestId("login-submit")).toBeInTheDocument();
+    expect(screen.queryByTestId("otp-verification")).not.toBeInTheDocument();
   });
 
-  it("can type into inputs and check checkbox", async () => {
-    renderWithRouter(<Login />);
+  test("switches to OTP verification when status is VERIFY_EMAIL_REQUIRED and loginInfo is set", () => {
+    const mockUpdate = jest.fn();
 
-    const emailInput = screen.getByTestId("login-email") as HTMLInputElement;
-    const passwordInput = screen.getByTestId(
-      "login-password"
-    ) as HTMLInputElement;
-    const rememberCheckbox = screen.getByTestId(
-      "login-remember"
-    ) as HTMLInputElement;
-
-    await act(async () => {
-      fireEvent.change(emailInput, { target: { value: "test@example.com" } });
-      fireEvent.change(passwordInput, { target: { value: "password123" } });
-      fireEvent.click(rememberCheckbox);
+    const { asFragment } = wrapper({
+      authContextInfo: { auth: { status: AUTH_STATUS.VERIFY_EMAIL_REQUIRED } },
+      updateAuthContextInfo: mockUpdate
     });
 
-    expect(emailInput.value).toBe("test@example.com");
-    expect(passwordInput.value).toBe("password123");
-    expect(rememberCheckbox.checked).toBe(true);
+    // simulate loginInfo being set through LoginForm
+    fireEvent.click(screen.getByText("setLoginInfo"));
+
+    expect(screen.getByTestId("otp-verification")).toBeInTheDocument();
+    expect(screen.queryByTestId("login-form")).not.toBeInTheDocument();
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it("submit button logs form values", async () => {
-    renderWithRouter(<Login />);
+  test("backToLogin triggers updateAuthContextInfo", () => {
+    const mockUpdate = jest.fn();
 
-    const emailInput = screen.getByTestId("login-email") as HTMLInputElement;
-    const passwordInput = screen.getByTestId(
-      "login-password"
-    ) as HTMLInputElement;
-    const rememberCheckbox = screen.getByTestId(
-      "login-remember"
-    ) as HTMLInputElement;
-    const submitButton = screen.getByTestId("login-submit");
-
-    await act(async () => {
-      fireEvent.change(emailInput, { target: { value: "test@example.com" } });
-      fireEvent.change(passwordInput, { target: { value: "password123" } });
-      fireEvent.click(rememberCheckbox);
-      fireEvent.click(submitButton);
+    wrapper({
+      authContextInfo: { auth: { status: AUTH_STATUS.VERIFY_EMAIL_REQUIRED } },
+      updateAuthContextInfo: mockUpdate
     });
 
-    // No console output expected in production UI handler; ensure inputs keep values
-    expect(emailInput.value).toBe("test@example.com");
-    expect(passwordInput.value).toBe("password123");
-    expect(rememberCheckbox.checked).toBe(true);
+    // simulate loginInfo to switch view
+    fireEvent.click(screen.getByText("setLoginInfo"));
+
+    // click back button inside OTP component
+    fireEvent.click(screen.getByText("back"));
+
+    expect(mockUpdate).toHaveBeenCalledWith({
+      auth: { status: AUTH_STATUS.UNAUTHENTICATED }
+    });
+  });
+
+  test("onVerifySuccess also calls backToLogin", () => {
+    const mockUpdate = jest.fn();
+
+    wrapper({
+      authContextInfo: { auth: { status: AUTH_STATUS.VERIFY_EMAIL_REQUIRED } },
+      updateAuthContextInfo: mockUpdate
+    });
+
+    fireEvent.click(screen.getByText("setLoginInfo"));
+
+    fireEvent.click(screen.getByText("success"));
+
+    expect(mockUpdate).toHaveBeenCalledWith({
+      auth: { status: AUTH_STATUS.UNAUTHENTICATED }
+    });
   });
 });

@@ -4,6 +4,8 @@ export const loginQuery = `
       code
       accessToken
       refreshToken
+      emailVerified
+      passwordChangeRequired
     }
   }
 `;

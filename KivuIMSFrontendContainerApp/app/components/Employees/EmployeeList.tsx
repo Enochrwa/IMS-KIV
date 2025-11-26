@@ -17,7 +17,8 @@ import {
   Pagination,
   Checkbox,
   TableSortLabel,
-  useTheme
+  useTheme,
+  MenuItem
 } from "@mui/material";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { useNavigate } from "react-router-dom";
@@ -52,11 +53,13 @@ const EmployeeList: React.FC = () => {
   const metricTimeRange = useSelector(
     (state: RootState) => state.dashboard
   ).metricTimeRange;
+  const stores = ["All", "Store1", "Store2"];
 
   const [search, setSearch] = useState("");
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [order, setOrder] = useState<Order>("asc");
   const [orderBy, setOrderBy] = useState<keyof Employee>("firstName");
+  const [storeFilter, setStoreFilter] = useState(stores[0]);
 
   useEffect(() => {
     (async () => {
@@ -172,6 +175,21 @@ const EmployeeList: React.FC = () => {
             gap={2}
             flexDirection={matchMD ? "column" : "row"}
           >
+            {/* 🧩 New store filter */}
+            <TextField
+              select
+              size="small"
+              value={storeFilter}
+              onChange={(e) => setStoreFilter(e.target.value)}
+              sx={{ minWidth: 180 }}
+              label="Store"
+            >
+              {stores.map((store) => (
+                <MenuItem key={store} value={store}>
+                  {store}
+                </MenuItem>
+              ))}
+            </TextField>
             <TextField
               size="small"
               placeholder="Search"
