@@ -75,8 +75,15 @@ const OtpValidation: React.FC<{
       });
 
       // On success, set token and move to reset step
-      setupToken(result.verificationToken || "dummy-token");
-      setNextStep(FORGOT_PWD_STEP.RESET);
+      if (result.success) {
+        setupToken(result.verificationToken || "dummy-token");
+        setNextStep(FORGOT_PWD_STEP.RESET);
+      } else {
+        setAlert({
+          severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
+          code: ALERT_BANNER_CODE.INVALID_OTP
+        });
+      }
     } catch {
       setAlert({
         severity: ALERT_BANNER_CODE_SEVERITY.ERROR,

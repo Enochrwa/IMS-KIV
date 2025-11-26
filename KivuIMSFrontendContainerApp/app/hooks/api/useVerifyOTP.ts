@@ -12,10 +12,10 @@ const useVerifyOTP = () => {
   const { setAlert } = useContext(AlertBannerContext);
 
   return useMutation<VerifyOTPResponse, Error, VerifyOTPRequest>({
-    mutationFn: (variables) =>
-      fetchGraphQL<{ verifyOTP: VerifyOTPResponse }, VerifyOTPRequest>(
+    mutationFn: (input) =>
+      fetchGraphQL<{ verifyOTP: VerifyOTPResponse }, { input: VerifyOTPRequest }>(
         verifyOTPQuery,
-        variables,
+        { input },
         setAlert
       ).then((res) => res.verifyOTP)
   });
