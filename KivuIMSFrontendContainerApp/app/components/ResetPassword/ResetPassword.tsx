@@ -85,23 +85,26 @@ const ResetPasswordForm: React.FC<{
   const resetMutation = useResetPassword();
   const isLoading = resetMutation.isPending;
 
-  const onSubmit = async (data: ResetPasswordForm) => {
+  const onSubmit = (data: ResetPasswordForm) => {
     if (isLoading) return;
 
-    try {
-      await resetMutation.mutateAsync({
+    resetMutation.mutate(
+      {
         verificationToken: token,
         newPassword: data.newPassword
-      });
-      // on success call handleSuccess
-      handleSuccess();
-    } catch {
-      // fetchGraphQL already maps errors to alert banner; set a safe fallback alert
-      setAlert({
-        severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
-        code: ALERT_BANNER_CODE.INTERNAL_SERVER_ERROR
-      });
-    }
+      },
+      {
+        onSuccess: () => {
+          handleSuccess();
+        },
+        onError: () => {
+          setAlert({
+            severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
+            code: ALERT_BANNER_CODE.INTERNAL_SERVER_ERROR
+          });
+        }
+      }
+    );
   };
 
   return (

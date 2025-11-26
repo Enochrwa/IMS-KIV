@@ -1,8 +1,7 @@
 export const verifyOTPQuery = `
-  mutation VerifyOTP($email: String!, $otp: String!) {
-    verifyOTP(email: $email, otp: $otp) {
+  mutation verifyEmailOtp($input: VerifyEmailOtpInput!) {
+    verifyEmailOtp(input: $input) {
       verificationToken
-      success
     }
   }
 `;
