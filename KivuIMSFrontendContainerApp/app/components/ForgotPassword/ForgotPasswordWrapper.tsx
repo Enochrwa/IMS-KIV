@@ -63,8 +63,9 @@ const ForgotPasswordWrapper = () => {
       <OtpVerification
         otpType="email"
         onBackToLogin={() => {}}
-        onVerifySuccess={() => {
-          setToken("");
+        onVerifySuccess={(token: string) => {
+          setToken(token);
+          setCurrentStep(FORGOT_PWD_STEP.RESET);
         }}
         loginInfo={email}
       />

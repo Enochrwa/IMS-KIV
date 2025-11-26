@@ -3,6 +3,7 @@ export type OTPType = "email" | "phone";
 export interface OtpVerifyEmailResponse {
   verifyEmailOtp: {
     code: string;
+    verificationToken: string;
   };
 }
 

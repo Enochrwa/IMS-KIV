@@ -26,7 +26,7 @@ const config: Config = {
   testEnvironment: "jsdom",
 
   // ✅ Use ts-jest for TypeScript + ESM
-  preset: "ts-jest/presets/default-esm",
+  preset: "ts-jest",
   extensionsToTreatAsEsm: [".ts", ".tsx"],
 
   // ✅ Transform .ts/.tsx via ts-jest
@@ -34,7 +34,6 @@ const config: Config = {
     "^.+\\.(t|j)sx?$": [
       "ts-jest",
       {
-        useESM: true,
         tsconfig: "tsconfig.json"
       }
     ]
