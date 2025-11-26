@@ -1,33 +1,22 @@
-import React, { useContext, useState } from "react";
-import { Box, Typography, Button, TextField, Paper } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Button, Paper, TextField, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { BRAND_COLOR, BRAND_HOVER } from "../constants/colors";
 import { OTPType } from "./types/otpVerification";
-import {
-  ALERT_BANNER_CODE,
-  ALERT_BANNER_CODE_SEVERITY
-} from "../../../Enums/alertCode";
-import { useVerifyEmailOtp } from "../../../hooks/api/useVerifyOTP";
-import AlertBannerContext from "../../../context/alertBannerContext";
-import { API_RESPONSE_CODE } from "../../../Enums/api";
 
-export interface VerifyEmailProps {
+export interface OtpVerificationProps {
   otpType: OTPType;
   onBackToLogin: () => void;
-  onVerifySuccess: () => void;
-  loginInfo: string;
+  handleSubmitOtp: (otp: string) => void;
 }
 
-const OtpVerification: React.FC<VerifyEmailProps> = ({
+const OtpVerification: React.FC<OtpVerificationProps> = ({
   otpType,
   onBackToLogin,
-  onVerifySuccess,
-  loginInfo
+  handleSubmitOtp
 }) => {
   const [otp, setOtp] = useState<string[]>(["", "", "", "", "", ""]);
   const [error, setError] = useState<string>("");
-  const useVerifyEmailOtpMutation = useVerifyEmailOtp();
-  const { setAlert } = useContext(AlertBannerContext);
 
   const handleChange = (value: string, index: number) => {
     if (/^\d?$/.test(value)) {
@@ -53,45 +42,6 @@ const OtpVerification: React.FC<VerifyEmailProps> = ({
     if (e.key === "Backspace" && !otp[index] && index > 0) {
       const prevInput = document.getElementById(`otp-${index - 1}`);
       prevInput?.focus();
-    }
-  };
-
-  const handleSubmitOtp = async (otp: string) => {
-    try {
-      if (loginInfo) {
-        await useVerifyEmailOtpMutation.mutateAsync(
-          {
-            email: loginInfo,
-            otp
-          },
-          {
-            onSuccess: (response) => {
-              const { code } = response.verifyEmailOtp;
-              if (code === API_RESPONSE_CODE.OK) {
-                onVerifySuccess();
-              } else {
-                setAlert({
-                  severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
-                  code: code as ALERT_BANNER_CODE
-                });
-              }
-            },
-            onError: (error) => {
-              setAlert({
-                severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
-                code: error.message
-                  ? (error.message as ALERT_BANNER_CODE)
-                  : ALERT_BANNER_CODE.ACCESS_DENIED
-              });
-            }
-          }
-        );
-      }
-    } catch {
-      setAlert({
-        severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
-        code: ALERT_BANNER_CODE.INTERNAL_ERROR
-      });
     }
   };
 
