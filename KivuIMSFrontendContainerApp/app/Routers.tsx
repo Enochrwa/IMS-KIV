@@ -43,11 +43,6 @@ const Routers = () => {
             element={<ForgotPasswordWrapper />}
           />
 
-          <Route
-            path={PAGE_ROUTE_FORGOT_PASSWORD}
-            element={<ForgotPasswordWrapper />}
-          />
-
           {/* Authenticated / portal routes */}
           <Route path="portal" element={<AppShell />}>
             <Route index element={<DashboardPage />} />

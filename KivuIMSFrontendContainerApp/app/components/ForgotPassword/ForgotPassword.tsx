@@ -58,21 +58,24 @@ const ForgotOtpForm: React.FC<{
     emailInputRef.current?.focus();
   }, []);
 
-  const onSubmit = async (data: ForgotPasswordData) => {
+  const onSubmit = (data: ForgotPasswordData) => {
     if (forgotPasswordMutation.isPending) return;
 
-    try {
-      await forgotPasswordMutation.mutateAsync({ email: data.email });
-
-      // On success, set email and move to next step
-      setEmail(data.email);
-      setNextStep(FORGOT_PWD_STEP.VALIDATE_OTP);
-    } catch {
-      setAlert({
-        severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
-        code: ALERT_BANNER_CODE.INTERNAL_SERVER_ERROR
-      });
-    }
+    forgotPasswordMutation.mutate(
+      { email: data.email },
+      {
+        onSuccess: () => {
+          setEmail(data.email);
+          setNextStep(FORGOT_PWD_STEP.VALIDATE_OTP);
+        },
+        onError: () => {
+          setAlert({
+            severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
+            code: ALERT_BANNER_CODE.INTERNAL_SERVER_ERROR
+          });
+        }
+      }
+    );
   };
 
   return (

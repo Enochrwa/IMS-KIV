@@ -14,8 +14,8 @@ import {
 } from "../../Enums/alertCode";
 import { OTPVerificationData } from "./types/otpVerificationTypes";
 import useVerifyOTP from "../../hooks/api/useVerifyOTP";
-import useForgotPassword from "../../hooks/api/useForgotPassword";
 import { FORGOT_PWD_STEP } from "../ForgotPassword/Enums/forgotPasswordSteps";
+import useRequestVerificationOtp from "../../hooks/api/useRequestVerificationOtp";
 
 const OtpValidation: React.FC<{
   email: string;
@@ -44,45 +44,53 @@ const OtpValidation: React.FC<{
   });
 
   const verifyOTPMutation = useVerifyOTP();
-  const resendOTPMutation = useForgotPassword();
+  const resendOTPMutation = useRequestVerificationOtp();
   const isLoading = verifyOTPMutation.isPending;
   const isResending = resendOTPMutation.isPending;
 
-  const resendOtp = async () => {
+  const resendOtp = () => {
     if (isResending) return;
 
-    try {
-      await resendOTPMutation.mutateAsync({ email });
-      setAlert({
-        severity: ALERT_BANNER_CODE_SEVERITY.SUCCESS,
-        code: ALERT_BANNER_CODE.RESEND_OTP_SUCCESS
-      });
-    } catch {
-      setAlert({
-        severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
-        code: ALERT_BANNER_CODE.INTERNAL_SERVER_ERROR
-      });
-    }
+    resendOTPMutation.mutate(
+      { email },
+      {
+        onSuccess: () => {
+          setAlert({
+            severity: ALERT_BANNER_CODE_SEVERITY.SUCCESS,
+            code: ALERT_BANNER_CODE.RESEND_OTP_SUCCESS
+          });
+        },
+        onError: () => {
+          setAlert({
+            severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
+            code: ALERT_BANNER_CODE.INTERNAL_SERVER_ERROR
+          });
+        }
+      }
+    );
   };
 
-  const onSubmit = async (data: OTPVerificationData) => {
+  const onSubmit = (data: OTPVerificationData) => {
     if (isLoading) return;
 
-    try {
-      const result = await verifyOTPMutation.mutateAsync({
+    verifyOTPMutation.mutate(
+      {
         email,
         otp: data.otp
-      });
-
-      // On success, set token and move to reset step
-      setupToken(result.verificationToken || "dummy-token");
-      setNextStep(FORGOT_PWD_STEP.RESET);
-    } catch {
-      setAlert({
-        severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
-        code: ALERT_BANNER_CODE.INVALID_OTP
-      });
-    }
+      },
+      {
+        onSuccess: (result) => {
+          setupToken(result.verificationToken || "dummy-token");
+          setNextStep(FORGOT_PWD_STEP.RESET);
+        },
+        onError: () => {
+          setAlert({
+            severity: ALERT_BANNER_CODE_SEVERITY.ERROR,
+            code: ALERT_BANNER_CODE.INVALID_OTP
+          });
+        }
+      }
+    );
   };
 
   return (
